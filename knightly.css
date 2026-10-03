@@ -1,0 +1,190 @@
+:root {
+    --text-color: #ba8f01;
+    --bg-color: #0e0e0e;
+    --main-color: #002653;
+    --border-color: #606060;
+    --link-color: #433bff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Redoin names etc to make it a simpler to read css for myself compared to last submission*/
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+.logo {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+}
+
+header nav a {
+    color: var(--text-color);
+}
+
+.main-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--border-color);
+}
+
+.banner-img {
+    border-right: 1px solid var(--border-color);
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text {
+    padding: 40px;
+    background-color: var(--main-color);
+}
+
+.action-btn {
+    display: inline-block;
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+.display-box img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.item-card {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+}
+
+/* Delete the placeholder images and stuff later*/
+.box-placeholder {
+    border: 1px solid var(--border-color);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.split-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.media-element {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.list-entry {
+    display: flex;
+    gap: 15px;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.side-box {
+    border: 1px solid var(--border-color);
+    width: 100px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--border-color);
+}
+
+.feature-info {
+    padding: 40px;
+    border-right: 1px solid var(--border-color);
+}
+
+.display-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.footer-card {
+    border: 1px solid var(--border-color);
+    padding: 30px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+@media (maximum-width: 768px) {
+    .main-banner, .split-box, .feature-section, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banner-img, .feature-info {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+}
